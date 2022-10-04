@@ -2,9 +2,14 @@
 
 A tool for sorting blocks of lines.
 
+## Install
+```
+go install github.com/tomnomnom/blocksort@latest
+```
+
 ## Usage
 
-Given some blocks of lines on `stdin` (in this example there 3 lines in each block):
+Given some blocks of lines on `stdin`:
 
 ```
 ▶ cat blocks.txt
@@ -19,7 +24,7 @@ Block B
     Item 3
 ```
 
-They can be sorted by a given line (defaulting to the first line):
+They can be sorted by a specific line (defaulting to the first line):
 
 ```
 ▶ cat blocks.txt | blocksort -n3
@@ -34,6 +39,9 @@ Block C
     Item 1
 ```
 
+The `-n`/`--number` flag sets how many lines are in each block.
+The `-i`/`--index` flag sets which line in the block to use when sorting.
+
 Get help with `-h`:
 
 ```
@@ -45,10 +53,7 @@ Usage of blocksort:
 pflag: help requested
 ```
 
-## Install
-```
-go install github.com/tomnomnom/blocksort@latest
-```
 
 ## Credit
-Built for @digininja because of [this Twitter thread](https://twitter.com/digininja/status/1577331330567766016).
+Built for [@digininja](https://github.com/digininja) as a result of
+[this Twitter thread](https://twitter.com/digininja/status/1577331330567766016).
